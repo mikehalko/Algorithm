@@ -36,6 +36,13 @@ public class SimpleList<T> implements List<T> {
         return true;
     }
 
+    @Override
+    public void clear() {
+        Arrays.fill(array, null);
+        array = new Object[START_CAPACITY];
+        size = 0;
+    }
+
     public boolean add(T object) {
         checkFullness();
         array[size] = object;
@@ -184,11 +191,6 @@ public class SimpleList<T> implements List<T> {
     @Override
     public boolean retainAll(Collection<?> c) {
         throw new UnsupportedOperationException("retainAll");
-    }
-
-    @Override
-    public void clear() {
-        throw new UnsupportedOperationException("clear");
     }
 
     @Override

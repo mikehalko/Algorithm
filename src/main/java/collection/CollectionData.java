@@ -17,7 +17,7 @@ public class CollectionData {
     }
 
     public static class ListData<T> extends SimpleList<T> {
-        private ListData(Generator<T> gen, int quantity) {
+        public ListData(Generator<T> gen, int quantity) {
             for (int i = 0; i < quantity; i++)
                 add(gen.next());
         }
