@@ -1,13 +1,13 @@
 package collection.performance;
 
 
-//: containers/Test.java
-// Framework for performing timed tests of containers.
-
 public abstract class Test<C> {
     String name;
-    public Test(String name) { this.name = name; }
-    // Override this Template Method for different tests.
+
+    public Test(String name) {
+        this.name = name;
+    }
+
     // Returns actual number of repetitions of test.
-    abstract int test(C container, TestParam tp);
-} ///:~
+    public abstract int test(C container, TestParam param);
+}
